@@ -187,7 +187,7 @@ elif page == "Forecast Explorer":
 
     # Create Monthly Sales
     sales_df = (
-        df.groupby(pd.Grouper(key="Order Date", freq="M"))["Sales"]
+        df.groupby(pd.Grouper(key="Order Date", freq="ME"))["Sales"]
         .sum()
         .reset_index()
     )
