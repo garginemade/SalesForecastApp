@@ -88,7 +88,7 @@ if page == "Sales Overview":
         df.groupby(
             pd.Grouper(
                 key="Order Date",
-                freq="M"
+                freq="ME"
             )
         )["Sales"]
         .sum()
@@ -224,7 +224,7 @@ elif page == "Forecast Explorer":
         df.groupby(
             pd.Grouper(
                 key="Order Date",
-                freq="M"
+                freq="ME"
             )
         )["Sales"]
         .sum()
